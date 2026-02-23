@@ -316,3 +316,6 @@ There is a clear separation between the two conditions in the MDS plot, which in
 This *differential expression analysis* identified a large number of genes significantly altered between tumor and normal liver tissue (FDR < 0.05). The MA and volcano plots shows that many genes exhibit both strong fold changes and high statistical significance, indicating some sort of transcriptional dysregulation in *hepatocellular carcinoma*. Following, the heatmap of the top 50 differentially expressed genes shows a clustering by diagnosis, suggesting tumor and normal samples have different expression *forms*. Moreover, when looking to the MDS plot, the way the two conditions are clustered reinforces that diagnosis is fundamental on global transcriptional variation.
 
 # References
+
+::: {#refs}
+:::
