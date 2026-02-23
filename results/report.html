@@ -61,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -232,13 +233,13 @@ window.Quarto = {
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>human_projects <span class="ot">&lt;-</span> <span class="fu">available_projects</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:31.425821 caching file sra.recount_project.MD.gz.</code></pre>
+<pre><code>2026-02-23 08:25:40.803598 caching file sra.recount_project.MD.gz.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:32.024268 caching file gtex.recount_project.MD.gz.</code></pre>
+<pre><code>2026-02-23 08:25:41.422534 caching file gtex.recount_project.MD.gz.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:32.728762 caching file tcga.recount_project.MD.gz.</code></pre>
+<pre><code>2026-02-23 08:25:42.064073 caching file tcga.recount_project.MD.gz.</code></pre>
 </div>
 </div>
 <p>Now I have to select a specific project (SRP<em>) to analyze and load its data. Thanks to the </em>metadata*, it is possible to search within the available projects to find one that matches the desired criteria.</p>
@@ -322,37 +323,37 @@ window.Quarto = {
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>rse_srpSRP068976 <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(proj_info)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:38.10358 downloading and reading the metadata.</code></pre>
+<pre><code>2026-02-23 08:25:46.886907 downloading and reading the metadata.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:39.097875 caching file sra.sra.SRP068976.MD.gz.</code></pre>
+<pre><code>2026-02-23 08:25:47.499558 caching file sra.sra.SRP068976.MD.gz.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:39.84205 caching file sra.recount_project.SRP068976.MD.gz.</code></pre>
+<pre><code>2026-02-23 08:25:48.628737 caching file sra.recount_project.SRP068976.MD.gz.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:40.410813 caching file sra.recount_qc.SRP068976.MD.gz.</code></pre>
+<pre><code>2026-02-23 08:25:49.251815 caching file sra.recount_qc.SRP068976.MD.gz.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:41.170985 caching file sra.recount_seq_qc.SRP068976.MD.gz.</code></pre>
+<pre><code>2026-02-23 08:25:49.923718 caching file sra.recount_seq_qc.SRP068976.MD.gz.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:41.884079 caching file sra.recount_pred.SRP068976.MD.gz.</code></pre>
+<pre><code>2026-02-23 08:25:50.582078 caching file sra.recount_pred.SRP068976.MD.gz.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:41.983122 downloading and reading the feature information.</code></pre>
+<pre><code>2026-02-23 08:25:50.694502 downloading and reading the feature information.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:42.600543 caching file human.gene_sums.G026.gtf.gz.</code></pre>
+<pre><code>2026-02-23 08:25:51.195367 caching file human.gene_sums.G026.gtf.gz.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:43.987938 downloading and reading the counts: 99 samples across 63856 features.</code></pre>
+<pre><code>2026-02-23 08:25:52.749424 downloading and reading the counts: 99 samples across 63856 features.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:44.649146 caching file sra.gene_sums.SRP068976.G026.gz.</code></pre>
+<pre><code>2026-02-23 08:25:53.227519 caching file sra.gene_sums.SRP068976.G026.gz.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2026-02-23 07:44:46.09959 constructing the RangedSummarizedExperiment (rse) object.</code></pre>
+<pre><code>2026-02-23 08:25:54.851701 constructing the RangedSummarizedExperiment (rse) object.</code></pre>
 </div>
 </div>
 </section>
@@ -723,14 +724,34 @@ FALSE  TRUE
 <p>This <em>differential expression analysis</em> identified a large number of genes significantly altered between tumor and normal liver tissue (FDR &lt; 0.05). The MA and volcano plots shows that many genes exhibit both strong fold changes and high statistical significance, indicating some sort of transcriptional dysregulation in <em>hepatocellular carcinoma</em>. Following, the heatmap of the top 50 differentially expressed genes shows a clustering by diagnosis, suggesting tumor and normal samples have different expression <em>forms</em>. Moreover, when looking to the MDS plot, the way the two conditions are clustered reinforces that diagnosis is fundamental on global transcriptional variation.</p>
 </section>
 </section>
-<section id="references" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> References</h1>
-<div id="refs" role="list">
+<section id="references" class="level1 unnumbered" data-number="2">
 
-</div>
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">2 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ColladoTorres2017" class="csl-entry" role="listitem">
+Collado-Torres, L. et al. 2017. <span>“Reproducible RNA-Seq Analysis Using Recount2.”</span> <em>F1000Research</em> 6: 1558. <a href="https://doi.org/10.12688/f1000research.12223.1">https://doi.org/10.12688/f1000research.12223.1</a>.
+</div>
+<div id="ref-ColladoCourse2026" class="csl-entry" role="listitem">
+Collado-Torres, Leonardo. 2026. <span>“Intro RNA-Seq LCG-UNAM 2026.”</span> <a href="https://lcolladotor.github.io/rnaseq_LCG-UNAM_2026/index.html" class="uri">https://lcolladotor.github.io/rnaseq_LCG-UNAM_2026/index.html</a>.
+</div>
+<div id="ref-Law2014" class="csl-entry" role="listitem">
+Law, C. W. et al. 2014. <span>“Voom: Precision Weights Unlock Linear Model Analysis Tools for RNA-Seq Read Counts.”</span> <em>Genome Biology</em> 15: R29. <a href="https://doi.org/10.1186/gb-2014-15-2-r29">https://doi.org/10.1186/gb-2014-15-2-r29</a>.
+</div>
+<div id="ref-GSE77314" class="csl-entry" role="listitem">
+NCBI Gene Expression Omnibus. 2016. <span>“GSE77314: RNA-Seq of 50 Paired Hepatocellular Carcinoma Samples.”</span> <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE77314" class="uri">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE77314</a>.
+</div>
+<div id="ref-Ritchie2015" class="csl-entry" role="listitem">
+Ritchie, M. E. et al. 2015. <span>“Limma Powers Differential Expression Analyses for RNA-Sequencing and Microarray Studies.”</span> <em>Nucleic Acids Research</em> 43: e47. <a href="https://doi.org/10.1093/nar/gkv007">https://doi.org/10.1093/nar/gkv007</a>.
+</div>
+<div id="ref-Robinson2010" class="csl-entry" role="listitem">
+Robinson, M. D., D. J. McCarthy, and G. K. Smyth. 2010. <span>“edgeR: A Bioconductor Package for Differential Expression Analysis of Digital Gene Expression Data.”</span> <em>Bioinformatics</em> 26: 139–40. <a href="https://doi.org/10.1093/bioinformatics/btp616">https://doi.org/10.1093/bioinformatics/btp616</a>.
+</div>
+<div id="ref-Totoki2016" class="csl-entry" role="listitem">
+Totoki, Y. et al. 2016. <span>“Trans-Ancestry Mutational Landscape of Hepatocellular Carcinoma Genomes.”</span> <em>Nature Genetics</em> 48: 1267–73. <a href="https://doi.org/10.1038/ng.3672">https://doi.org/10.1038/ng.3672</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
